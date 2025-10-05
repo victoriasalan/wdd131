@@ -87,13 +87,14 @@ body {
 .data dl {
     margin: 0;
     display: grid;
-    gap: .25rem;
+    gap: .35rem;
 }
 
 .data dl>div {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: .75rem;
+    grid-template-columns: 1 fr auto;
+    column-gap: .75rem;
+    align-items: baseline;
 }
 
 .data dt {
