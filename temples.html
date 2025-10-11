@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temple Album</title>
+    <meta name="description" content="Temple Album" />
+    <meta name="author" content="Victoria Salazar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 700px)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Temple Album</h1>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">☰</button>
+
+        <nav id="primary-nav" class="nav">
+            <ul>
+                <li><a href="#" class="active" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+
+        <section class="gallery">
+            <figure data-year="2014" data-size="large">
+                <img src="images/phoenix_arizona_temple_exterior.jpeg"
+                    alt="Phoenix Arizona Temple">
+                <figcaption>Phoenix Arizona</figcaption>
+            </figure>
+            <figure data-year="1888" data-size="small">
+                <img src="images/manti_temple_lds.jpeg" alt="Manti Utah Temple">
+                <figcaption>Manti Utah</figcaption>
+            </figure>
+            <figure data-year="1958" data-size="small">
+                <img src="images/london_england_temple_lds.jpeg"
+                    alt="London England Temple">
+                <figcaption>London England</figcaption>
+            </figure>
+            <figure data-year="1919" data-size="small">
+                <img src="images/laie_hawaii_temple_lds.jpeg"
+                    alt="Laie Hawaii Temple">
+                <figcaption>Laie Hawaii</figcaption>
+            </figure>
+            <figure data-year="2024" data-size="large">
+                <img src="images/layton_utah_temple_exterior.jpeg"
+                    alt="Layton Utah Temple">
+                <figcaption>Layton Utah</figcaption>
+            </figure>
+            <figure data-year="2020" data-size="small">
+                <img src="images/temple_barcelona_spain_temple.jpeg"
+                    alt="Barcelona Spain Temple">
+                <figcaption>Barcelona Spain</figcaption>
+            </figure>
+            <figure data-year="2015" data-size="large">
+                <img src="images/utah-payson-temple.jpeg" alt="Payson Utah Temple">
+                <figcaption>Payson Utah</figcaption>
+            </figure>
+            <figure data-year="2022" data-size="small">
+                <img src="images/quito_ecuador_temple.jpeg"
+                    alt="Quito Ecuador Temple">
+                <figcaption>Quito Ecuador</figcaption>
+            </figure>
+            <figure data-year="1999" data-size="large">
+                <img src="images/guayaquil_ecuador_temple_lds.jpeg"
+                    alt="Guayaquil Ecuador Temple">
+                <figcaption>Guayaquil Ecuador</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy;<span id="year"></span> • <span class="owner-name">Victoria S.</span> • <span class="location">United
+                States</span></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -175,8 +175,8 @@ body {
         right: .5rem;
         top: 50%;
         transform: translateY(-50%);
-        width: 28px;
-        height: 28px;
+        width: 5px;
+        height: 5px;
         background: url("images/weather.svg") no-repeat center / contain;
         opacity: 0.95;
     }
