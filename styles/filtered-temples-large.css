@@ -1,0 +1,37 @@
+.site-header {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav {
+    grid-column: auto;
+}
+
+.nav ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: .5rem;
+    background: transparent;
+}
+
+.nav a {
+    padding: .5rem .75rem;
+}
+
+.cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.25rem;
+}
+
+.card {
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .10);
+}
