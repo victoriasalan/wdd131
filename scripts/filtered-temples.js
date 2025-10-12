@@ -126,7 +126,7 @@ function applyFilter(filter) {
     navLinks.forEach(a => a.classList.toggle("active", a.dataset.filter === filter));
 
     let out = temples.slice();
-    if (filter === "old") out = temples.filter(t => getYear(t) < 1900);
+    if (filter === "old") out = temples.filter(t => getYear(t) < 1999);
     else if (filter === "new") out = temples.filter(t => getYear(t) > 2000);
     else if (filter === "large") out = temples.filter(t => t.area > 90000);
     else if (filter === "small") out = temples.filter(t => t.area < 10000);
