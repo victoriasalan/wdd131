@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sublipronto - Website Plan</title>
+    <meta name="description" content="Project plan">
+    <meta name="author" content="Victoria Salazar">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Website Planning Document</h1>
+    </header>
+
+    <main>
+        <section id="site-name">
+            <h2>1. Site Name</h2>
+            <p><strong>Sublipronto</strong></p>
+            <p>I chose that name since it was the name of a business my dad used to have. It combines the words sublimation and pronto to denote the type of business and the speed and quality of it. </p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The purpose of the Sublipronto website is to promote the business, display available products, and make
+                it easier for customers to request custom items. The site will include:</p>
+            <ul>
+                <li>A home page explaining the concept and mission.</li>
+                <li>A product page with descriptions and sample images.</li>
+                <li>An order/contact page with a simple form or table for client requests.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li>What types of personalized products does Sublipronto offer?</li>
+                <li>How can I place a custom order or request a quote?</li>
+            </ul>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>Main colors used on the website and where they are going to be used:</p>
+
+            <div class="palette">
+                <div class="color-box">
+                    <div class="color-sample primary"></div>
+                    <p><strong>#0c6399</strong><br>Primary color for headers and navigation.</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample accent"></div>
+                    <p><strong>#ffb703</strong><br>Accent color for buttons or highlights.</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample bg"></div>
+                    <p><strong>#f4f4f4</strong><br>Background color for light contrast.</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-sample surface"></div>
+                    <p><strong>#ffffff</strong><br>Used for main content sections.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>The website will use two Google Fonts:</p>
+            <ul>
+                <li><strong>Poppins</strong> - for headings.</li>
+                <li><strong>Open Sans</strong> - for paragraphs and body text.</li>
+            </ul>
+        </section>
+
+        <section id="wireframes">
+            <h2>6. Wireframes - Home Page</h2>
+            <div class="wireframes">
+                <div>
+                    <h3>Mobile Layout</h3>
+                    <img src="images/wireframe-mobile.png" alt="Mobile wireframe layout">
+                </div>
+                <div>
+                    <h3>Desktop Layout</h3>
+                    <img src="images/wireframe-desktop.png" alt="Desktop wireframe layout">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Victoria Salazar</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
