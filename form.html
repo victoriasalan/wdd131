@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Allows the user to submit reviews.">
+    <meta name="author" content="Victoria Salazar">
+<link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    </header>
+
+    <main>
+        <h1>Product Review</h1>
+
+        <form method="get" action="review.html">
+            <label for="product">Product Name<span class="required">*</span></label>
+            <select id="product" name="product" required></select>
+
+            <fieldset class="rating">
+                <legend>Overall Rating<span class="required">*</span></legend>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+                <output id="ratingValue" class="muted">Choose a rating</output>
+            </fieldset>
+
+            <label for="installed">Date of Installation<span class="required">*</span></label>
+            <input type="date" id="installed" name="installed" required>
+
+            <fieldset>
+                <legend>Useful Features (check all that apply)</legend>
+                <label><input type="checkbox" name="features" value="Durability">Durability</label>
+                <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+                <label><input type="checkbox" name="features" value="Performance">Performance</label>
+                <label><input type="checkbox" name="features" value="Design">Design</label>
+            </fieldset>
+
+            <label for="review">Written Review (optional)</label>
+            <textarea id="review" name="review" rows="5"></textarea>
+
+            <label for="username">Your Name (optional)</label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Post My Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Victoria Salazar · Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/form.js" defer></script>
+</body>
+
+</html>
