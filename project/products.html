@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products - Sublipronto</title>
+    <meta name="description" content="Browse Sublipronto's custom products: pins, mugs, shirts, and ornaments." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="logo" href="index.html">Sublipronto <span id="favCount" class="small"></span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="products.html">Products</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" aria-labelledby="products-title">
+            <h1 id="products-title">Products</h1>
+            <p>Click ☆ Save to add items to your favorites. Favorites are stored on your device.</p>
+
+            <div class="grid grid-3 product-grid">
+
+                <article class="card">
+                    <img src="images/featured-pins.jpg"
+                        alt="Assorted custom campaign buttons in orange, white, and blue." loading="lazy" width="796"
+                        height="683">
+                    <h3>Pins / Buttons</h3>
+                    <p>Personalized pins for events, clubs, and campaigns.</p>
+                    <button class="btn fav-btn" type="button" data-product="Pins">☆ Save</button>
+                </article>
+
+                <article class="card">
+                    <img src="images/mugs.jpg" alt="Blank ceramic mugs with colored interiors and handles."
+                        loading="lazy" width="1200" height="1185">
+                    <h3>Mugs</h3>
+                    <p>11–15oz ceramic mugs ready for your custom designs.</p>
+                    <button class="btn fav-btn" type="button" data-product="Mugs">☆ Save</button>
+                </article>
+
+                <article class="card">
+                    <img src="images/featured-shirt.jpg" alt="Black T-shirt with printed cartoon characters."
+                        loading="lazy" width="588" height="768">
+                    <h3>T-Shirts</h3>
+                    <p>Poly or poly-blend tees with vibrant, long-lasting prints.</p>
+                    <button class="btn fav-btn" type="button" data-product="T-Shirts">☆ Save</button>
+                </article>
+
+                <article class="card">
+                    <img src="images/ornaments.jpg"
+                        alt="Red glitter Christmas ornaments personalized with names in white script." loading="lazy"
+                        width="803" height="553">
+                    <h3>Ornaments</h3>
+                    <p>Seasonal ornaments with names or messages.</p>
+                    <button class="btn fav-btn" type="button" data-product="Ornaments">☆ Save</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container small">
+            <p>&copy; <span id="year"></span> Sublipronto • <a href="references.html">References</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

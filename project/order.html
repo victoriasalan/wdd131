@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order - Sublipronto</title>
+    <meta name="description" content="Request a quote or place an order." />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a class="logo" href="index.html">Sublipronto</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a class="active" href="order.html">Order</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" aria-labelledby="order-title">
+            <h1 id="order-title">Start an Order</h1>
+            <p>Fill out this simple form to request a quote. We'll get back to you shortly.</p>
+
+            <div id="preview" class="card small" aria-live="polite"></div>
+
+            <form class="card form" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend class="sr-only">Order Details</legend>
+                    <div class="grid grid-2 form-grid">
+                        <div class="field">
+                            <label for="product">Product</label>
+                            <select id="product" name="product" required>
+                                <option value="" disabled selected>Select a product</option>
+                                <option>Mug 11oz</option>
+                                <option>Mug 15oz</option>
+                                <option>T-Shirt</option>
+                                <option>Pins</option>
+                                <option>Ornaments</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="qty">Quantity</label>
+                            <input type="number" id="qty" name="qty" min="1" value="1" required />
+                        </div>
+                        <div class="field">
+                            <label for="color">Preferred Colors (optional)</label>
+                            <input type="text" id="color" name="color" placeholder="e.g., navy blue, gold" />
+                        </div>
+                        <div class="field">
+                            <label for="deadline">Desired Date</label>
+                            <input type="date" id="deadline" name="deadline" />
+                        </div>
+                        <div class="field full">
+                            <label for="notes">Design Notes</label>
+                            <textarea id="notes" name="notes" rows="4"
+                                placeholder="Briefly describe your idea"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="sr-only">Contact</legend>
+                    <div class="grid grid-2 form-grid">
+                        <div class="field">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required />
+                        </div>
+                        <div class="field full">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Send Order Request</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container small">
+            <p>&copy; <span id="year"></span> Sublipronto • <a href="references.html">References</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

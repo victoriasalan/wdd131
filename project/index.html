@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sublipronto</title>
+    <meta name="description" content="Business site">
+    <meta name="author" content="Victoria Salazar">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    
+    <body>
+        <header class="site-header">
+            <div class="container header-row">
+                <a class="logo" href="index.html">Sublipronto</a>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <nav class="site-nav" aria-label="Primary">
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="order.html">Order</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <section class="container hero">
+                <img src="images/hero-banner.webp"
+                    alt="Customized items including mug, hat, and photo album displayed on light blue background."
+                    width="1600" height="800" loading="eager">
+            </section>
+    
+            <section class="container intro">
+                <h1>Bring Your Ideas to Life</h1>
+                <p>Personalized mugs, shirts, pins, and custom gifts — printed fast with durable, vibrant color.</p>
+                <p><a class="btn" href="products.html">Explore Products</a></p>
+            </section>
+    
+            <section class="gallery">
+                <div class="container">
+                    <h2>Our Work</h2>
+                    <div class="gallery-grid two">
+                        <figure>
+                            <img src="images/featured-mug.jpg"
+                                alt="Pink mug with unicorn design and the text ‘Today I’m a Unicorn.’" width="541"
+                                height="659" loading="lazy">
+                            <figcaption>Custom Mug</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/featured-shirt.jpg" alt="Black T-shirt with printed cartoon characters."
+                                width="588" height="768" loading="lazy">
+                            <figcaption>Printed Shirt</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="site-footer">
+            <div class="container small">
+                <p>&copy; <span id="year"></span> Sublipronto • Banner photo: Michael Hession / NYT Wirecutter • Product
+                    photos: Victoria Salazar • <a href="references.html">References</a></p>
+            </div>
+        </footer>
+    
+        <script src="scripts/main.js"></script>
+    </body>
+    
+    </html>
