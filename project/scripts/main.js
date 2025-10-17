@@ -31,13 +31,8 @@ function setBtnState(btn, on) {
 function toggleFav(name, btn) {
     let favs = readFavs();
     const i = favs.indexOf(name);
-    if (i === -1) {
-        favs.push(name);
-        setBtnState(btn, true);
-    } else {
-        favs.splice(i, 1);
-        setBtnState(btn, false);
-    }
+    if (i === -1) { favs.push(name); setBtnState(btn, true); }
+    else { favs.splice(i, 1); setBtnState(btn, false); }
     writeFavs(favs);
     renderFavCount();
 }
@@ -79,3 +74,67 @@ function orderPreview() {
     });
 });
 orderPreview();
+
+const LAST_ORDER_KEY = 'sublipronto:lastOrder';
+
+function serializeForm(form) {
+    const data = new FormData(form);
+    const obj = {};
+    for (const [k, v] of data.entries()) obj[k] = String(v).trim();
+    obj.timestamp = new Date().toISOString();
+    return obj;
+}
+
+const orderForm = $('#orderForm');
+if (orderForm) {
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const product = $('#product')?.value;
+        const qty = parseInt($('#qty')?.value || '0', 10) || 0;
+        if (!product) { alert('Please choose a product.'); return; }
+        if (qty < 1) { alert('Quantity must be at least 1.'); return; }
+
+        const orderObj = serializeForm(orderForm);
+        localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(orderObj));
+
+        window.location.href = 'confirm.html';
+    });
+}
+
+function renderConfirmation() {
+    const box = $('#order-confirm');
+    if (!box) return;
+
+    const raw = localStorage.getItem(LAST_ORDER_KEY);
+    if (!raw) { box.textContent = 'No order found.'; return; }
+
+    const o = JSON.parse(raw);
+
+    const items = [
+        { label: 'Product', value: o.product || '—' },
+        { label: 'Quantity', value: o.qty || '—' },
+        { label: 'Preferred Colors', value: o.color || '—' },
+        { label: 'Desired Date', value: o.deadline || '—' },
+        { label: 'Notes', value: o.notes || '—' },
+        { label: 'Name', value: o.name || '—' },
+        { label: 'Email', value: o.email || '—' },
+        { label: 'Phone', value: o.phone || '—' }
+    ];
+
+    const list = items
+        .map(it => `<li><strong>${it.label}:</strong> ${it.value}</li>`)
+        .join('');
+
+    const when = new Date(o.timestamp).toLocaleString();
+
+    box.innerHTML = `
+    <p><strong>Order ID:</strong> ${o.timestamp.replace(/\D/g, '').slice(0, 14)}</p>
+    <p class="small">Submitted on ${when}</p>
+    <ul style="margin-left:1rem">${list}</ul>
+    <p class="center" style="margin-top:1rem;">
+      <a class="btn" href="order.html">Submit another request</a>
+    </p>
+  `;
+}
+renderConfirmation();
