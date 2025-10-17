@@ -137,4 +137,38 @@ function renderConfirmation() {
     </p>
   `;
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('orderForm');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+
+        const builtInValid = form.checkValidity();
+
+        const requiredFields = Array.from(form.querySelectorAll('[required]'));
+        let firstInvalid = null;
+
+        requiredFields.forEach((field) => {
+            const val = (field.value ?? '').trim();
+            const empty = val === '' || (field.tagName === 'SELECT' && field.selectedIndex === 0);
+            if (!firstInvalid && (empty || !field.checkValidity())) {
+                firstInvalid = field;
+            }
+            if (empty || !field.checkValidity()) {
+                field.classList.add('invalid');
+                field.setAttribute('aria-invalid', 'true');
+            } else {
+                field.removeAttribute('aria-invalid');
+            }
+        });
+
+        if (!builtInValid || firstInvalid) {
+            e.preventDefault();
+            alert('Please fill out all required fields before submitting.');
+            if (firstInvalid) firstInvalid.focus({ preventScroll: false });
+        }
+    });
+});
+
 renderConfirmation();

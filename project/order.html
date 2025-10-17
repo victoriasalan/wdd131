@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Order - Sublipronto</title>
     <meta name="author" content="Victoria Salazar">
@@ -16,7 +16,9 @@
 <body>
     <header class="site-header">
         <div class="container header-row">
-            <a class="logo" href="index.html">Sublipronto</a>
+            <a href="index.html" class="logo">
+                <img src="images/sublipronto.png" alt="Sublipronto logo" width="120" height="120">
+            </a>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
             <nav class="site-nav" aria-label="Primary">
                 <ul>
@@ -35,12 +37,12 @@
 
             <div id="preview" class="card small" aria-live="polite"></div>
 
-            <form id ="orderForm" class="card form" action="#" method="post" novalidate>
+            <form id="orderForm" class="card form" action="#" method="post" novalidate>
                 <fieldset>
                     <legend class="sr-only">Order Details</legend>
                     <div class="grid grid-2 form-grid">
                         <div class="field">
-                            <label for="product">Product</label>
+                            <label for="product" class="required">Product</label>
                             <select id="product" name="product" required>
                                 <option value="" disabled selected>Select a product</option>
                                 <option>Mug 11oz</option>
@@ -51,7 +53,7 @@
                             </select>
                         </div>
                         <div class="field">
-                            <label for="qty">Quantity</label>
+                            <label for="qty" class="required">Quantity</label>
                             <input type="number" id="qty" name="qty" min="1" value="1" required />
                         </div>
                         <div class="field">
@@ -74,11 +76,11 @@
                     <legend class="sr-only">Contact</legend>
                     <div class="grid grid-2 form-grid">
                         <div class="field">
-                            <label for="name">Full Name</label>
+                            <label for="name" class="required">Full Name</label>
                             <input type="text" id="name" name="name" autocomplete="name" required />
                         </div>
                         <div class="field">
-                            <label for="email">Email</label>
+                            <label for="email" class="required">Email</label>
                             <input type="email" id="email" name="email" autocomplete="email" required />
                         </div>
                         <div class="field full">
